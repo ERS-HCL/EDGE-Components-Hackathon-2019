@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date Spinner</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../dist/dateSpinner.css">
+</head>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	html, body{
+		font-family: Arial;
+		background-color: #f1f1f1;
+		color: #6b6b6b;
+	}
+	html{
+		margin: 0px 0px 20px 0px;
+	}
+
+	.header{
+		background-color: #2cd075;
+		border-bottom: 1px solid #20a25a;
+		color: #FFFFFF;
+		font-size: 30px;
+	}
+
+	input[type=text], input[type=button]{
+		height: 40px;
+		border: 1px solid #999999;
+		line-height: 40px;
+		padding-left: 5px;
+	}
+	input[type=button]{
+		padding: 0px 15px;
+		border-color: #20a25a;
+		background-color: #2cd075;
+		color: #FFFFFF;
+		text-transform: uppercase;
+	}
+
+	#dateStuff .dateSpinner{
+		background-color: #FFFFFF;
+	}
+
+	#dateStuff2 .dateSpinner{
+		border:0;
+		background:none;
+	}
+	#dateStuff2 .clip{
+		border-radius: 9999px;
+		padding: 0px 8px;
+		border:0;
+	}
+	#dateStuff2 .clip i.before{
+		border-bottom-color: #15a5f9;
+	}
+	#dateStuff2 .clip i.after{
+		border-top-color: #15a5f9;
+	}
+	#dateStuff2 .wrapper{
+		border: 2px solid #0f81c3;
+		border-radius: 9999px;
+		background-color: #15a5f9;
+		color: #FFFFFF;
+	}
+	#dateStuff2 .wrapper li{
+		font-size: 14px;
+	}
+	#dateStuff2 .wrapper li.active{
+		font-size: 16px;
+	}
+
+	@media (min-width:320px) and (max-width:1023px)  {
+		.dateSpinner{
+			height: 150px;
+		}
+		.dateSpinner li{
+			height: 40px;
+			font-size: 16px
+		}
+		.dateSpinner li.active{
+			font-size: 22px
+		}
+	}
+</style>
+<body>
+	<div class="col-12 header" style="padding: 40px 0px;">
+		<div class="col-md-10 offset-md-1">
+			<h1 style="font-size: 50px;">Date Spinner Javascript Plugin - Demo</h1>
+		</div>
+	</div>
+	<div class="col-md-10 offset-md-1" style="margin-top: 50px;">
+		<div class="col-lg-6 col-12">
+			<div class="col col-sm-6" style="font-weight: bold;">
+				Select Date:
+			</div>
+			<div class="col col-sm-6">
+				<div id="dateStuff"></div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-12">
+			<h3>On every update date will change here:</h3>
+			<div id="updatedDate"></div>
+
+			<h3 style="margin-top: 20px;">Event:</h3>
+			<div id="updatedEvent"></div>
+
+			<h3 style="margin-top: 20px;">Set New Date Button:</h3>
+			<div>
+				<input placeholder="E.g Aug-15-1947" id="setNewDate" type="text" name="">
+				<input type="button" value="Update Date" onclick="setNewDate();">
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-10 offset-md-1" style="margin-top: 50px;">
+		<div class="col-sm-6 col-12">
+			<div class="col col-sm-6" style="font-weight: bold;">
+				Select Date:
+			</div>
+			<div class="col col-sm-6">
+				<div id="dateStuff2"></div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-12">
+			<h3>On every update date will change here:</h3>
+			<div id="updatedDate2"></div>
+
+			<h3 style="margin-top: 20px;">Event:</h3>
+			<div id="updatedEvent2"></div>
+
+			<h3 style="margin-top: 20px;">Set New Date Button:</h3>
+			<div>
+				<input placeholder="E.g Aug-15-1947" id="setNewDate2" type="text" name="">
+				<input type="button" value="Update Date" onclick="setNewDate2();">
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="../dist/dateSpinner.js"></script>
+	<script type="text/javascript">
+		var myDateSpinner = new dateSpinner.setSpinner({
+		    selector: '#dateStuff',
+		    defaultDate: 'Mar-15-1990',
+		    dateFormat: 'DD-MMM-YYYY',
+		    yearStart: 1980,
+            onChange: function(event){
+            	setTimeout(function(){
+	            	document.getElementById('updatedDate').innerHTML= new Date(myDateSpinner.getDate())
+					document.getElementById('updatedEvent').innerHTML= event.type;
+				});
+            }
+		});
+
+		function setNewDate(){
+			myDateSpinner.setDate(document.getElementById('setNewDate').value)
+		}
+
+		var myDateSpinner2 = new dateSpinner.setSpinner({
+		    selector: '#dateStuff2',
+		    defaultDate: 'Mar-15-2001',
+            onChange: function(event){
+            	setTimeout(function(){
+	            	document.getElementById('updatedDate2').innerHTML= new Date(myDateSpinner2.getDate())
+					document.getElementById('updatedEvent2').innerHTML= event.type;
+				});
+            }
+		});
+
+		function setNewDate2(){
+			myDateSpinner2.setDate(document.getElementById('setNewDate2').value)
+		}
+
+		
+	</script>
+</body>
+</html>

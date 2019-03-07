@@ -1,0 +1,79 @@
+.dateSpinner{
+	width: 100%;
+	height: 50px;
+	min-width: 150px;
+	background: #eeeeee;
+	border: 1px solid #AAAAAA;
+	margin: 20px 0px;
+}
+.dateSpinner .clip{
+	width: 33.33333333%;
+	height: 100%;
+	float: left;
+	position: relative;
+	text-align: center;
+}
+.dateSpinner .clip i.before, .dateSpinner .clip i.after{
+	content: "";
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+	left: calc(50% - 10px);
+}
+.dateSpinner .clip i.before{
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid #777777;
+	top: -25px;
+}
+.dateSpinner .clip i.after{
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-top: 10px solid #777777;
+	bottom: -25px;
+}
+
+.dateSpinner .clip i.before.disabled{
+	opacity: 0.7;
+}
+.dateSpinner .clip i.after.disabled{
+	opacity: 0.7;
+}
+
+.dateSpinner .clip .wrapper{
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.dateSpinner .clip:not(:first-child){
+	border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+.dateSpinner .clip ul{
+	width: 100%;
+	list-style: none;
+	float: left;
+	overflow-x: hidden;
+	position: absolute;
+    top: calc(50% - 10px);
+    transition: all 180ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
+.dateSpinner li{
+	width: 100%;
+	list-style: none;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+	transition: all 180ms ease-in-out;
+}
+.dateSpinner li.active{
+	font-size: 20px;
+	font-weight: bold;
+}
