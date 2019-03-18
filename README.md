@@ -38,3 +38,8 @@ Saleem Malik : https://github.com/saleemmalikraja
 
 ## Author - Context Menu:
 Koushik R : https://github.com/koushik27
+
+
+## Screenshot : 
+
+![Calendar-ContextMenu](https://github.com/ERS-HCL/EDGE-Components-Hackathon-2019/blob/ERSEDGE022019047/src/assets/Calendar_Context%20Menu.png)
