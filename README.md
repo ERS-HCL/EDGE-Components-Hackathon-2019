@@ -35,5 +35,3 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 User selects the theme-color,text-alignment,font-style and font-family from the theme-picker and clicks on submit button,will get change in the page appearance.
     
 
-In this Theme Change Component creation, we used @angular/forms and @ng-bootstrap/ng-bootstrap dependencies.
-
