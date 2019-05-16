@@ -1,11 +1,11 @@
 .theme { 
     justify-content: center;
     background-color: #f4f4f4;
-    width:60%;
+    width:50%;
     margin-left:20%;
     margin-top:1%;
     margin-bottom:2%;
-    padding:20px;
+    padding:30px;;
     border-radius:30px;
     text-align: left;
     font-style: var(--themeFontStyle); 
@@ -13,11 +13,13 @@
     color:var(--themeColor); 
     border: 0.5px solid var(--themeColor); 
   }
-  .labelStyle{
-    width:250px;
-  }
+
   select,input{
-    width:180px;
+    width:180px;    
+    border-radius: 5px;
+    padding:2px;
+    margin:5px;
+    text-align:center;
   }
   .buttonDiv{
     text-align:center;
@@ -27,5 +29,6 @@
               cursor:pointer; 
               background-color: var(--themeColor);   
               font-style: var(--themeFontStyle);     
+               padding: 5px 10px; 
           }
-       
+  
