@@ -1,21 +1,23 @@
 @import '../theme-picker/theme';
 @import '../theme-picker/functions';
 
+
 .header {
 
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  margin-bottom:10px;
    background-color: var(--themeColor);
 }
-.tabsTitle{
- 
-  font-style: var(--themeFontStyle); 
-  font-family:var(--themeFontFamily);
-   color: var(--themeColor);
+.body{
+      margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 25px;
 }
-.tabsContent{
-  margin:1% 5% 1% 2%;
- 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.Content{
+  margin:1% 5% 1% 2%; 
   text-align:var(--themeTextAlignment);  
   font-style: var(--themeFontStyle); 
   font-family:var(--themeFontFamily);
@@ -43,5 +45,6 @@ button{
            border-radius: 20px;              
             cursor:pointer; 
             background-color: var(--themeColor);  
-            font-style: var(--themeFontStyle);       
+            font-style: var(--themeFontStyle); 
+            padding: 5px 10px;      
         }
