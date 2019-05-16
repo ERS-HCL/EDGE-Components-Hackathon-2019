@@ -4,60 +4,22 @@
       style="height:50px;width:200px;">
   </div>
   <div class="body">
-    <ngb-tabset #t="ngbTabset">
-      <ngb-tab id="tab-selectbyid1">
-        <ng-template ngbTabTitle><b class="tabsTitle">Home</b></ng-template>
-        <ng-template ngbTabContent>
-          <h4 class="tabsContent">WHAT MAKES HCL THE PARTNER OF CHOICE FOR ENTERPRISES IN THE DIGITAL AGE?</h4>
-          <p class="tabsContent">
-            MODE 01 02 03 STRATEGY AGILE & LEAN
-          </p>
-          <div class="tabsContent">
-            <ul style="list-style-type:none;">
-              <li>1.Applications</li>
-              <li>2.Infrastructure</li>
-              <li>3.Engineering and R&D</li>
-              <li>4.BServ</li>
-              <li>5.DRYiCE Autonomics & Orchestration</li>
-            </ul>
-          </div>
-        </ng-template>
-      </ngb-tab>
-      <ngb-tab id="tab-selectbyid2">
-        <ng-template ngbTabTitle><b class="tabsTitle">About</b></ng-template>
-        <ng-template ngbTabContent>
-          <h4 class="tabsContent">WHERE VALUES DRIVE VELOCITY</h4>
-          <p class="tabsContent">A commitment to our core valuesas helped HCL Technologies built long-term,value centric relationships with customers
-            and become oneof the next-generation global technology companies.
-          </p>
-          <h4 class="tabsContent">ANALYST RECOGNITIONS</h4>
-          <p class="tabsContent">
-            HCL continues to deliver customised transformation services to customers with a consistent focus driven by our Mode 1-2-3
-            strategy. As a result, we are clearly positioned as one of the most reliable partners in the IT services sector.
-            This is also acknowledged by leading industry analyst firms who have rated HCL as a leader in various categories
-            across service lines and industries.</p>
-        </ng-template>
-      </ngb-tab>
-      <ngb-tab id="tab-selectbyid3">
-        <ng-template ngbTabTitle><b class="tabsTitle">Contact Us</b></ng-template>
-        <ng-template ngbTabContent>
-          <p class="tabsContent">Get in touch with us and find out how we can help you reimagine your enterprise for the digital age. For jobs and
-            related information, visit the careers section.
-          </p>
-          <pre class="tabsContent">
-            <b>HCL Technologies corporate Headquarters</b>           
-            HCL Technologies Ltd.
-            Technology Hub, SEZ
-            Plot No. 3A, Sector 126
-            Noida – 201304, India
-          </pre>
-        </ng-template>
-      </ngb-tab>
-    </ngb-tabset>
+    <h4 class="Content">WHAT MAKES HCL THE PARTNER OF CHOICE FOR ENTERPRISES IN THE DIGITAL AGE?</h4>
+    <p class="Content">
+      MODE 01 02 03 STRATEGY AGILE & LEAN
+    </p>
+    <div class="Content">
+      <ul style="list-style-type:none;">
+        <li>1.Applications</li>
+        <li>2.Infrastructure</li>
+        <li>3.Engineering and R&D</li>
+        <li>4.BServ</li>
+        <li>5.DRYiCE Autonomics & Orchestration</li>
+      </ul>
+    </div>
   </div>
   <div class="buttonDiv">
-    <button class="button__theme-switcher" (click)="toggleThemeSwitcher()">Theme Picker</button>
-
+    <button class="button__theme-switcher" (click)="toggleThemeSwitcher()">Theme Switcher</button>
   </div>
   <app-theme-picker *ngIf="isSwitcherShown"></app-theme-picker>
   <div class="footer">
