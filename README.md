@@ -13,7 +13,7 @@ The Theme Change component is useful for changing the theme of a page which is h
   <img width="800" height="400" src="LatestImages/ThemeChangeComponentAfterApplyingTheme.PNG" alt="Theme-change-component-Img">
  </p>
  
- To preview demo of countdown-timer component, [Click here](https://angular-scss-demo-v43tvk.stackblitz.io)
+ To preview demo of countdown-timer component, [Click here](https://angular-scss-demo-ruj52a.stackblitz.io/)
 
 ## Using the complete angular project
 Download the Theme Change Component folder and install the required packages and run the application.
